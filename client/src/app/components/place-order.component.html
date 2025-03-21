@@ -51,16 +51,16 @@
           <tr>
             <td> 1 </td>
             <td> {{ item.name }} </td>
-            <td> ${{ item.price | number: '1.0-2'}} </td>
+            <td> ${{ item.price | number: '1.2-2'}} </td>
             <td> {{ item.quantity }} </td>
-            <td> ${{ item.quantity * item.price | number: '1.0-2' }} </td>
+            <td> ${{ item.quantity * item.price | number: '1.2-2' }} </td>
           </tr>
         }
       </tbody>
       <tfoot>
         <tr>
           <td colspan="4"></td>
-          <td> ${{ total | number: '1.0-2' }} </td>
+          <td> ${{ total | number: '1.2-2' }} </td>
         </tr>
       </tfoot>
 
