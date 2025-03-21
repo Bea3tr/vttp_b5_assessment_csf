@@ -1,7 +1,6 @@
 package vttp.batch5.csf.assessment.server.services;
 
 import java.io.StringReader;
-import java.text.DecimalFormat;
 import java.util.List;
 import java.util.UUID;
 import java.util.logging.Logger;
@@ -19,7 +18,6 @@ import jakarta.json.Json;
 import jakarta.json.JsonArray;
 import jakarta.json.JsonArrayBuilder;
 import jakarta.json.JsonObject;
-import jakarta.json.JsonObjectBuilder;
 import vttp.batch5.csf.assessment.server.repositories.OrdersRepository;
 import vttp.batch5.csf.assessment.server.repositories.RestaurantRepository;
 

@@ -8,7 +8,7 @@ create database restaurant;
 use restaurant;
 
 create table customers (
-  username varchar(64) not null,
+  username varchar(64) not null primary key,
   password varchar(128) not null
 );
 

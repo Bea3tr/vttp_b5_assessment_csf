@@ -30,6 +30,10 @@ export class MenuComponent implements OnInit {
       })
   }
 
+  isNoOrders(): boolean {
+    return this.total == 0;
+  }
+  
   addItem(item: MenuItem) {
     item.quantity += 1
     this.numOrders += 1

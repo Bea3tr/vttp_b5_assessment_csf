@@ -19,7 +19,7 @@ export class RestaurantService {
   // TODO: Task 2.2
   // You change the method's signature but not the name
   getMenuItems(): Promise<MenuItem[]> {
-    return lastValueFrom(this.http.get<MenuItem[]>('https://vttpcsf-production.up.railway.app/api/menu'));
+    return lastValueFrom(this.http.get<MenuItem[]>('/api/menu'));
   }
 
   sendPlacedOrders(selectedItems: MenuItem[], total: number) {
@@ -39,6 +39,6 @@ export class RestaurantService {
       password: form.value['password'],
       items: items
     }
-    return lastValueFrom(this.http.post<any>('https://vttpcsf-production.up.railway.app/api/food_order', { body }));
+    return lastValueFrom(this.http.post<any>('/api/food_order', { body }));
   }
 }

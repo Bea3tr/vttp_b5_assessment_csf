@@ -2,7 +2,7 @@
   <div class="col d-flex justify-content-between align-items-center">
     <div class="fs-1 fw-bold text-primary">Menu (${{ total | number: '1.0-2'}})</div>
     <div>
-      <button type="button" class="btn btn-primary" (click)="placeOrders()">
+      <button type="button" class="btn btn-primary" [disabled]="isNoOrders()" (click)="placeOrders()">
         Place Order ({{ numOrders }})
       </button>
     </div>
