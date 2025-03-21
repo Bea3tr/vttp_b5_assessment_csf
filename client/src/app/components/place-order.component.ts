@@ -41,6 +41,7 @@ export class PlaceOrderComponent implements OnInit {
     this.restaurantSvc.confirmOrders(this.form, this.selectedItems)
       .then((resp) => {
         console.info(resp)
+        console.info(resp.paymentId)
         let co = {
           date: resp.timestamp,
           order_id: resp.orderId,
