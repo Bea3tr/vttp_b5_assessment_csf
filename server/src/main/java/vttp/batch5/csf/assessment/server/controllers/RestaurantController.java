@@ -62,6 +62,7 @@ public class RestaurantController {
       ex.printStackTrace();
       return ResponseEntity.status((500))
         .body(Json.createObjectBuilder()
+          .add("error", "Error posting food order")
           .add("message", ex.getMessage())
           .build().toString());
     }

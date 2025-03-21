@@ -3,6 +3,7 @@ import { RestaurantService } from '../restaurant.service';
 import { MenuItem } from '../models';
 import { AbstractControl, FormBuilder, FormGroup, ValidationErrors, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { HttpErrorResponse } from '@angular/common/http';
 
 @Component({
   selector: 'app-place-order',
@@ -49,9 +50,9 @@ export class PlaceOrderComponent implements OnInit {
         this.restaurantSvc.confirmOrder(co)
         this.router.navigate(['/confirm'])
       })
-      .catch((err) => {
-        console.info(err.message)
-        alert(err.message)
+      .catch((err: HttpErrorResponse) => {
+        console.info(err.error.message)
+        alert(err.error.message)
       })
   }
 
