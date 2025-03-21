@@ -1,5 +1,5 @@
 import { Component, inject, OnInit } from '@angular/core';
-import { MenuItem, SelectedItem } from '../models';
+import { MenuItem } from '../models';
 import { RestaurantService } from '../restaurant.service';
 import { Router } from '@angular/router';
 

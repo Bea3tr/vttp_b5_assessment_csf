@@ -7,7 +7,9 @@ export interface MenuItem {
     quantity: number
 }
 
-export interface SelectedItem {
-    item: MenuItem,
-    quantity: number
+export interface ConfirmOrder {
+    date: number,
+    order_id: string,
+    payment_id: string,
+    total: number
 }

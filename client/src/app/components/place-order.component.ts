@@ -40,10 +40,17 @@ export class PlaceOrderComponent implements OnInit {
     this.restaurantSvc.confirmOrders(this.form, this.selectedItems)
       .then((resp) => {
         console.info(resp)
+        let co = {
+          date: resp.timestamp,
+          order_id: resp.orderId,
+          payment_id: resp.payment_id,
+          total: resp.total
+        }
+        this.restaurantSvc.confirmOrder(co)
         this.router.navigate(['/confirm'])
       })
       .catch((err) => {
-        console.info(err)
+        console.info(err.message)
         alert(err.message)
       })
   }
