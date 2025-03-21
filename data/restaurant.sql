@@ -21,3 +21,14 @@ insert into customers(username, password) values
 
 -- TODO: Task 1.2
 -- Write your task 1.2 below
+create table place_orders (
+  order_id char(8) not null,
+  payment_id varchar(128) not null,
+  order_date date,
+  total decimal(8, 2),
+  username varchar(64) not null,
+  primary key(order_id),
+  constraint fk_username 
+	foreign key(username) 
+	references customers(username)
+);
