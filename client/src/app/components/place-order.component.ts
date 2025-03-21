@@ -44,7 +44,7 @@ export class PlaceOrderComponent implements OnInit {
         let co = {
           date: resp.timestamp,
           order_id: resp.orderId,
-          payment_id: resp.payment_id,
+          payment_id: resp.paymentId,
           total: resp.total
         }
         this.restaurantSvc.confirmOrder(co)

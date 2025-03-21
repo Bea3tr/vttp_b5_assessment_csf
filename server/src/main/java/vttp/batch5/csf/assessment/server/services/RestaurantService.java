@@ -90,7 +90,7 @@ public class RestaurantService {
     if(sqlInserted && mgInserted) {
       return Json.createObjectBuilder()
         .add("orderId", order_id)
-        .add("payment_id", payment_id)
+        .add("paymentId", payment_id)
         .add("total", sum)
         .add("timestamp", timestamp)
         .build();
